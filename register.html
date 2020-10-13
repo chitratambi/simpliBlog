@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpliBlog</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+</head>
+<body>
+        <!-- main -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-lg-5 text-center">
+                    <!-- Form Login -->
+                    <div class="card text-center d-block w-100 no_border">
+                        <div class="card-header">
+                            <img src="images/logo.png" alt="logo image">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold mb-2">Sign Up</h4>
+                            <p class="card-text">
+                                <small>Hey! Fill up the information below to create an account with SimpliBlog.</small> 
+                            </p>
+                            <form name="mySignupForm" 
+                                  action="/action_page.php" 
+                                  onsubmit="return validate_Signup_Form()" 
+                                  method="post">
+
+                                <!-- form-group// -->
+                                <div class="form-group form-inline">
+                                    <input class="form-control" placeholder="First name" type="text" required>
+                                    <input class="form-control" placeholder="Last name" type="text" required>
+                                </div> 
+                                <!-- form-group// -->
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Email" type="email" required>
+                                </div> 
+                                
+                                <!-- form-group// -->
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Password" type="password" required>
+                                </div> 
+                                <!-- form-group// -->
+                                <div class="form-group clearfix">
+                                    <label class="float-left custom-control custom-checkbox"> <input type="checkbox"
+                                            class="custom-control-input" checked="true">
+                                        <span class="custom-control-label"> 
+                                            <small>I agree to the <a href="#">Terms and Conditions.</a> </small> 
+                                        </span>
+                                    </label>
+                                </div> 
+                                <!-- form-group // -->
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary" name="register">Sign Up</button>
+                                </div> 
+                                <!-- form-group// -->
+                            </form>
+                            <!--end form //-->
+                            <div class="redirect"> 
+                                <small>Already have an account?<a href="login_pg.html"> Sign in</a></small> 
+                            </div>
+                            
+                        </div> 
+                        <!-- card-body // -->
+                        <div class="card-footer text-muted">
+                            <small>&copy; 2020 - SimpliBlog Work. All Rights Reserved. </small>
+                        </div>
+                    </div> 
+                    <!-- card // -->
+                </div>
+                <div class="col-12 col-lg-7 p-0">
+                    <img src="images/login_pg_bg_img.JPG" class="img-fluid" alt="background-img">
+                </div>
+            </div>
+        </div>
+        <!-- end main -->
+    <!-- JS only-->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>    
+    <script src="js/custom_script.js"></script>
+</body>
+</html>
