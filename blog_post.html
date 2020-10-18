@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpliBlog</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
+            <a class="navbar-brand" href="#"> <img src="images/logo.png" alt="logo" class="img-fluid" width="100" height="30"> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-supported-content" 
+                    aria-controls="navbar-supported-content" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-supported-content">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="navr-item active pr-3"> 
+                        <a class="nav-link text-warning" href="index.html"> Home </a> 
+                    </li>
+                    <li class="nav-item pr-3"> 
+                        <a class="nav-link text-warning font-weight-bold" href="blog_post.html"> Publication </a> 
+                    </li>
+                </ul>
+                <form class="form-inline">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Search" aria-label="Username" 
+                      aria-describedby="basic-addon1">
+                      <div class="input-group-append">
+                        <span class="input-group-text fa fa-search" id="search"></span>
+                      </div>
+                    </div>
+                </form>
+                <button class="btn btn-outline-warning justify-content-centers ml-1" type="submit">
+                    <a href="login_pg.html" target="_blank" class="text-warning">Login</a>
+                </button>            
+            </div>
+        </nav>
+    </header>
+    <!-- end header -->
+
+    <div class="main">
+        <div class="container-fluid mt-4">
+            <div class="row">
+                <div id="coronavirus-box" class="border border-warning rounded">
+                    <h4 class="text-center text-warning mt-2"><u>Coronavirus update</u></h4>
+                    <p class="p-2">In the midst of the COVID-19 pandemic, eating healthy food remains an important part of maintaining your health. While there are no specific foods that can help protect you from the virus, a nutritious diet can boost your immune system or help you fight off symptoms. You may not be able to share meals with friends and loved ones, but there are lots of other ways to eat well and support your health at this difficult time.</p>
+                 </div>
+            </div>
+            <form class="mt-4 mb-4 bg-light p-5" name="myPublicationForm" action="/action_page.php" onsubmit="return validate_Publication_Form()" method="POST">
+                <h2 class="text-center">New publication</h2>
+                <h5>General</h5>
+                <hr />
+                <div class="form-row form-group">
+                    <div class="col-md-4"><label for="userid">Name*</label></div>
+                    <div class="col-md-6 offset-2"><input class="form-control" type="text" name="name" required></div>
+                </div>
+                <div class="form-row form-group">
+                    <div class="col-md-4"><label for="email">Email*</label></div>
+                    <div class="col-md-6 offset-2"><input class="form-control" type="email" name="email" required></div>
+                </div>
+                <div class="form-row form-group">
+                    <div class="col-md-4"><label for="userid">Short author bio</label></div>
+                    <div class="col-md-6 offset-2">
+                        <textarea class="form-control" id="short_author_bio" autocomplete="on" rows="3" cols="30"></textarea>
+                        <p class="text-black-50"><small>Please keep it below 300 characters.</small></p>
+                    </div>
+                </div>
+                <div class="form-row form-group"> 
+                    <div class="col-md-4"><label>Publication avatar:</label></div>
+                    <div class="col-md-6 offset-2"><input id="image" type="file" name="publication_avatar" placeholder="Profile Photo" capture></div>
+                </div>
+                <h5>Create a blog post</h5>
+                <p class="text-black-50"><small>Please submit your guest blog posts by using the fields below.</small></p>
+                <hr />
+                <div class="form-row form-group">
+                    <div class="col-md-4"><label for="post_title">Post title*</label></div>
+                    <div class="col-md-6 offset-2"><input class="form-control" type="text" name="tagline" required></div>
+                </div>
+                <div class="form-row form-group"> 
+                    <div class="col-md-4"><label>Publication cover image*</label></div>
+                    <div class="col-md-6 offset-2"><input id="image" type="file" name="publication_cover_image" placeholder="Photo" required="" capture>
+                    <p class="text-black-50"><small>Please make sure the dimensions are (600 x 300px).</small></p>
+                    </div>
+                </div>
+                <div class="form-row form-group">
+                    <div class="col-md-4"><label for="article_text">Article text*</label></div>
+                    <div class="col-md-6 offset-2">
+                        <textarea class="form-control" id="article_text" autocomplete="on" rows="3" cols="30" required></textarea>
+                    </div>
+                </div>
+                <div class="form-row form-group">
+                    <div class="col-md-4">
+                        <label for="category">Category*</label>
+                    </div>
+                    <div class="col-md-6 offset-2">
+                        <select id="category" class="form-control">
+                            <option value="1"> Uncategorized</option>
+                            <option value="22"> Announcement</option>
+                            <option value="42"> WordPress Tutorials</option>
+                            <option value="8765"> Showcases</option>
+                            <option value="65"> Marketing</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="form-row form-group">
+                    <div class="col-md-4"><label for="message">Message</label></div>
+                    <div class="col-md-6 offset-2">
+                        <textarea class="form-control" id="message" autocomplete="on" rows="3" cols="30"></textarea>
+                        <p class="text-black-50"><small>Please keep it below 100 characters.</small></p>
+                    </div>
+                </div>
+                <hr/>
+                <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                      <label class="form-check-label" for="invalidCheck">
+                        Agree to terms and conditions
+                      </label>
+                      <div class="invalid-feedback">
+                        You must agree before submitting.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <button class="btn btn-warning" type="submit" name="publish">Publish</button>
+                  </div>
+            </form>       
+        </div>
+    </div>
+               
+    <footer>
+        <div class="container-fluid bg-dark">
+            <div class="row justify-content-center">
+                <ul class="nav">
+                    <li class="nav-item"> <a class="nav-link text-white active" href="#">Home </a> </li>
+                    <li class="nav-item"> <a class="nav-link text-white" href="#"> About us</a></li>
+                    <li class="nav-item"> <a class="nav-link text-white" href="#">Terms & Conditions</a></li>
+                    <li class="nav-item"> <a class="nav-link text-white" href="#">Sitemap </a> </li>
+                    <li class="nav-item"> <a class="nav-link text-white" href="#"> Contact us </a></li>
+                </ul>
+            </div>
+            <div class="row justify-content-center">
+                <small class="text-warning">&copy; 2020 - SimpliBlog Work. All Rights Reserved. </small>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+    
+
+    <!-- JS only-->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script> 
+    <script src="js/custom_script.js"></script>
+</body>
+</html>

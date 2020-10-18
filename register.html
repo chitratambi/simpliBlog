@@ -16,7 +16,7 @@
                 <div class="col-12 col-sm-12 col-lg-5 text-center">
                     <!-- Form Login -->
                     <div class="card text-center d-block w-100 no_border">
-                        <div class="card-header">
+                        <div class="card-header my_card_header">
                             <img src="images/logo.png" alt="logo image">
                         </div>
                         <div class="card-body">
@@ -27,7 +27,7 @@
                             <form name="mySignupForm" 
                                   action="/action_page.php" 
                                   onsubmit="return validate_Signup_Form()" 
-                                  method="post">
+                                  method="POST">
 
                                 <!-- form-group// -->
                                 <div class="form-group form-inline">
@@ -62,7 +62,7 @@
                             <div class="redirect"> 
                                 <small>Already have an account?<a href="login_pg.html"> Sign in</a></small> 
                             </div>
-                            <div class="card-footer text-muted">
+                            <div class="card-footer my_card_footer text-muted">
                                 <small>&copy; 2020 - SimpliBlog Work. All Rights Reserved. </small>
                             </div>
                         </div> 
@@ -70,9 +70,10 @@
                     </div> 
                     <!-- card // -->
                 </div>
-                <div class="col-12 col-lg-7">
-                    <img src="images/login_pg_bg_img.JPG" class="img-fluid" alt="background-img">
-                </div>
+                <div class="col-12 col-lg-7 hidden-md hidden-sm hidden-xs my_card_bg_image">
+                    <div class="transbox">
+                    </div>
+                  </div>
             </div>
         </div>
         <!-- end main -->

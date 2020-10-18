@@ -14,3 +14,12 @@ function validate_Signup_Form() {
     }
   }
 
+  $('.your-checkbox').prop('indeterminate', true)
+  
+  function validate_Publication_Form() {
+    var x = document.forms["myPublicationForm"]["publish"].value;
+    if (x == "") {
+      alert("You have successfully post an article");
+      return false;
+    }
+  }

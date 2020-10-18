@@ -1,4 +1,28 @@
-.no_border
-{
+.heading {
+    color: rgba(0,0,0,.84);
+    font-size: 18px;
+    letter-spacing: 0;
+}
+.no_border{
     border: transparent;
+}
+.my_card_header,
+.my_card_footer{
+    margin: 0;
+    padding: 0; 
+    background-color: white; 
+    border: 0;
+}
+
+.my_card_bg_image {
+    background-image:url(../images/login_pg_bg_img.JPG);
+	background-repeat:no-repeat;
+    background-size:cover;
+	height:100%;
+	min-height: 100vh;
+}
+#coronavirus-box{
+    width: 98%;
+    margin: auto;
+    text-align: justify;
 }
