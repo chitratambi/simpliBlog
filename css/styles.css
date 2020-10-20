@@ -1,3 +1,22 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.my-navbar {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: .2rem 1rem;
+}
+
 .heading {
     color: rgba(0,0,0,.84);
     font-size: 18px;
@@ -6,8 +25,7 @@
 .no_border{
     border: transparent;
 }
-.my_card_header,
-.my_card_footer{
+.my_card_header, .my_card_footer{
     margin: 0;
     padding: 0; 
     background-color: white; 
@@ -26,3 +44,49 @@
     margin: auto;
     text-align: justify;
 }
+.my-text-warning {
+    color: #ffc107!important;
+}
+a.my-text-warning:focus, a.my-text-warning:hover {
+     color: #000 !important; 
+}
+
+.corona-heading
+{
+    color: #ff0000;
+}
+.fa-search:before 
+{
+    content: "\f002";
+    color: orangered;
+}
+.site-newsletter {
+    background: #f2f4f5;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    margin-top: 3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -13,16 +13,16 @@
         <!-- main -->
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12 col-sm-12 col-lg-5 text-center">
+                <div class="col-12 col-sm-12 col-lg-5 my-auto text-center">
                     <!-- Form Login -->
                     <div class="card text-center d-block w-100 no_border">
                         <div class="card-header my_card_header">
-                            <img src="images/logo.png" alt="logo image">
+                            <img src="images/c-logo.png" alt="logo image">
                         </div>
                         <div class="card-body">
                             <h4 class="card-title font-weight-bold mb-2">Sign Up</h4>
                             <p class="card-text">
-                                <small>Hey! Fill up the information below to create an account with SimpliBlog.</small> 
+                                <small>Hey! Fill up the information below to create an account with CBlogging.</small> 
                             </p>
                             <form name="mySignupForm" 
                                   action="/action_page.php" 
@@ -30,9 +30,9 @@
                                   method="POST">
 
                                 <!-- form-group// -->
-                                <div class="form-group form-inline">
-                                    <input class="form-control" placeholder="First name" type="text" required>
-                                    <input class="form-control" placeholder="Last name" type="text" required>
+                                <div class="form-row form-group">
+                                    <div class="col-6"><input class="form-control" placeholder="First name" type="text" required></div>
+                                    <div class="col-6"><input class="form-control" placeholder="Last name" type="text" required></div>
                                 </div> 
                                 <!-- form-group// -->
                                 <div class="form-group">
@@ -63,17 +63,15 @@
                                 <small>Already have an account?<a href="login_pg.html"> Sign in</a></small> 
                             </div>
                             <div class="card-footer my_card_footer text-muted">
-                                <small>&copy; 2020 - SimpliBlog Work. All Rights Reserved. </small>
+                                <small>&copy; 2020 - CBlogging Work. All Rights Reserved. </small>
                             </div>
                         </div> 
                         <!-- card-body // -->
                     </div> 
                     <!-- card // -->
                 </div>
-                <div class="col-12 col-lg-7 hidden-md hidden-sm hidden-xs my_card_bg_image">
-                    <div class="transbox">
-                    </div>
-                  </div>
+                <div class="col-12 col-lg-7 d-none d-lg-block my_card_bg_image"> </div>
+                </div>
             </div>
         </div>
         <!-- end main -->
